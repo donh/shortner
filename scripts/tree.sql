@@ -1,0 +1,14 @@
+DROP DATABASE IF EXISTS `tree`;
+CREATE DATABASE `tree`
+  DEFAULT CHARACTER SET utf8
+  DEFAULT COLLATE utf8_general_ci;
+USE tree;
+SET NAMES utf8;
+
+DROP TABLE IF EXISTS `tree`.`items`;
+CREATE TABLE `tree`.`items` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `url` varchar(250) CHARACTER SET utf8 NOT NULL,
+  `short` varchar(20) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
